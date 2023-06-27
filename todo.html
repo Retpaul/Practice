@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Application</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Form to add a new task -->
+        <form id="addTaskForm">
+          <!-- Task Name input -->
+          <div class="form-group">
+            <label for="taskName">Task Name:</label>
+            <input type="text" class="form-control" id="taskName" required>
+          </div>
+          <!-- Start Time input -->
+          <div class="form-group">
+            <label for="startTime">Start Time:</label>
+            <input type="time" class="form-control" id="startTime" required>
+          </div>
+          <!-- End Time input -->
+          <div class="form-group">
+            <label for="endTime">End Time:</label>
+            <input type="time" class="form-control" id="endTime" required>
+          </div>
+          <!-- Add Task button -->
+          <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+      </div>
+    </div>
+    <!-- Task List -->
+    <h2>Task List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+            <th>Task No</th>
+          <th>Task Name</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Action</th>
+          <th>Completed</th>
+        </tr>
+      </thead>
+      <tbody id="taskList">
+        <!-- Task items will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Include Bootstrap JS and your custom script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="todo.js"></script>
+</body>
+</html>
